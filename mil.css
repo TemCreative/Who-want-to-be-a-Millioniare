@@ -1,0 +1,28 @@
+.a{
+    background-color: black;
+    color: white;
+}
+.a:hover{
+    background-color: red;
+}
+.b{
+    background-color: black;
+    color: white;
+}
+.b:hover{
+    background-color: green;
+}
+.c{
+    background-color: black;
+    color: white;
+}
+.c:hover{
+    background-color: red;
+}
+.d{
+    background-color: black;
+    color: white;
+}
+.d:hover{
+    background-color: red;
+}
