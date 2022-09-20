@@ -73,5 +73,5 @@
 				    question : "Oscar Awards were instituted in"
 				}
             ]
-
+     itemDisplay.innerHTML = ""
 
