@@ -1,5 +1,5 @@
 var btnNext = document.getElementById("next");
-
+var btnAns = document.getElementById("answer")
  words = [
 	{
 		question :  'Free surface of a liquid behaves like a sheet and tends to contract to the smallest possible area due to the',
@@ -85,6 +85,7 @@ var btnNext = document.getElementById("next");
   
 	let index = Math.floor(Math.random() * tempWords.length);
 	document.getElementById("question").innerHTML=tempWords[index]?.question;
+	 document.getElementById("answer").innerHTML=tempWords[index]?.answer;	
 
 	let option0 = Math.floor(Math.random() * tempWords.length);
 	document.getElementById("option0").innerHTML=tempWords[index]?.question.option;
