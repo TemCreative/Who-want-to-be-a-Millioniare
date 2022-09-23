@@ -1,4 +1,6 @@
-var questionBanks = [
+var btnNext = document.getElementById("next");
+
+ words = [
 	{
 		question :  'Free surface of a liquid behaves like a sheet and tends to contract to the smallest possible area due to the',
 		option : ['force of adhesion','force of friction','centrifugal force','force of cohesion'],
@@ -70,6 +72,59 @@ var questionBanks = [
 		answer : '	74 mins' 
 	},
 ]
-     var question = document.getElementById ('question');
+
+    btnNext.addEventListener('click', function() {
+	var tempWords = [];
+  
+	if (tempWords.length === 0) {
+	  for (var i = 0; i < words.length; i++) {
+		tempWords.push(words[i]);
+  
+	  }
+	}
+  
+	let index = Math.floor(Math.random() * tempWords.length);
+	document.getElementById("question").innerHTML=tempWords[index]?.question;
+
+	let option0 = Math.floor(Math.random() * tempWords.length);
+	document.getElementById("option0").innerHTML=tempWords[index]?.option;
+	
+	let option1 = Math.floor(Math.random() * tempWords.length);
+	document.getElementById("option1").innerHTML=tempWords[index]?.option;
+
+	
+	let option2 = Math.floor(Math.random() * tempWords.length);
+	document.getElementById("option2").innerHTML=tempWords[index]?.option;
+  });
+    //  var question = document.getElementById ('question');
+	//  var quizContainer = document.getElementById ('quiz-container');	
+	//  var question = document.getElementById ('question');	
+	//  var scorecard = document.getElementById ('scorecard');	
+	//  var option0 = document.getElementById ('option0');	
+	//  var option1 = document.getElementById ('option1');	
+	//  var option2 = document.getElementById ('option2');	
+	//  var option3  = document.getElementById ('option3');	
+	//  var next = document.querySelectorAll('next');
+	//  var point = document.getElementById('score');
+	//  var span = document.querySelectorAll('span');
+
+	//  var i = 0;
+	//  var score = 0;
+
+	//  function displayQuestions(){
+	// 	for(var a=0; a<span.length; a++){
+	// 		span[a].style.background ='none';
+	// 	}
+	// 	question.innerHTML = 'Q.' + (i + 1)+ ' ' + questionBanks[i]+ question;
+	// 	option1.innerHTML + questionBanks[i].option[0];
+	// 	option2.innerHTML + questionBanks[i].option[1];
+	// 	option3.innerHTML + questionBanks[i].option[2];
+	// 	option4.innerHTML + questionBanks[i].option[3];
+	// 	stat.innerHTML = "Question" + ' ' + 'of' + ' ' + (i + 1) + ' ' + questionBanks.length;
+		
+	//  }
 	 
+	//  console.log(displayQuestions)
+
+
 
