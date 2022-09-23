@@ -87,14 +87,17 @@ var btnNext = document.getElementById("next");
 	document.getElementById("question").innerHTML=tempWords[index]?.question;
 
 	let option0 = Math.floor(Math.random() * tempWords.length);
-	document.getElementById("option0").innerHTML=tempWords[index]?.option;
+	document.getElementById("option0").innerHTML=tempWords[index]?.question.option;
 	
 	let option1 = Math.floor(Math.random() * tempWords.length);
-	document.getElementById("option1").innerHTML=tempWords[index]?.option;
+	document.getElementById("option1").innerHTML=tempWords[index]?.question.option;
 
 	
 	let option2 = Math.floor(Math.random() * tempWords.length);
-	document.getElementById("option2").innerHTML=tempWords[index]?.option;
+	document.getElementById("option2").innerHTML=tempWords[index]?.question.option;
+
+	let option3 = Math.floor(Math.random() * tempWords.length);
+	document.getElementById("option3").innerHTML=tempWords[index]?.question.option;
   });
     //  var question = document.getElementById ('question');
 	//  var quizContainer = document.getElementById ('quiz-container');	
