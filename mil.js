@@ -10,6 +10,26 @@ var questionBanks = [
 		answer : 'Gorkha National Liberation Front' 
 	},
 	{
+		question :  'Study at SQI, Succeed _______',
+		option : ['Anytime','Anyhow','Anywhere','Accurately'],
+		answer : 'Anywhere' 
+	},
+	{
+		question :  'SQI has campuses in',
+		option : ['Ogbomoso, Ibadan, Lagos','Ogbomoso,Osogbo, Abeokuta','Abuja,Delta,Ibadan','Ogbomoso,Ibadan'],
+		answer : 'Ogbomoso,Ibadan' 
+	},
+	{
+		question :  'SQI College of ICT offers all of these courses except ',
+		option : ['Robotics','Graphics Design','Software Developments','Geology'],
+		answer : 'Geology' 
+	},
+	{
+		question :  'SQI has a President and a Founder. What is his name?',
+		option : ['Dr. Femi Adeyemi','Dr. Adeyemi Adefemi','Dr. Adeyemi Aderinto','Dr. Femi Aderinto'],
+		answer : 'Dr. Adeyemi Aderinto' 
+	},
+	{
 		question :  'For safety, the fuse wire used in the mains for household supply of electricity must be made of metal having',
 		option : ['low melting point','high resistance','high melting point','low specific heat'],
 		answer : 'low melting point' 
@@ -26,24 +46,30 @@ var questionBanks = [
 	},
 	{
 		question :  '20th August is celebrated as',
-		option : ['Earth Day','Sadbhavana Divas','No Tobacco Day',''],
-		answer : '' 
+		option : ['Earth Day','Sadbhavana Divas','No Tobacco Day','None of these'],
+		answer : 'Sadbhavana Divas' 
 	},
 	{
-		question :  '',
-		option : ['','','',''],
-		answer : '' 
+		question :  'When is the World Population Day observed?',
+		option : ['May 31','October 4','December 10','July 11'],
+		answer : 'July 11' 
 	},
 	{
-		question :  '',
-		option : ['','','',''],
-		answer : '' 
+		question :  'January 15 is celebrated as the',
+		option : ['Republic Day','Ugadhi','	TeachersDay','Army Day'],
+		answer : 'Army Day' 
 	},
 	{
-		question :  '',
-		option : ['','','',''],
-		answer : '' 
+		question :  'What are three types of lasers?',
+		option : ['Gas, metal vapor, rock','Pointer, diode, CD','Diode, inverted, pointer','	Gas, solid state, diode'],
+		answer : '	Gas, solid state, diode' 
+	},
+	{
+		question :  'Compact discs, (according to the original CD specifications) hold how many minutes of music?',
+		option : ['	74 mins','56 mins','60 mins','	90 mins'],
+		answer : '	74 mins' 
 	},
 ]
-     itemDisplay.innerHTML = ""
+     var question = document.getElementById ('question');
+	 
 
