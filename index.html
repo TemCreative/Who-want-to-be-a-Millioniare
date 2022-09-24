@@ -27,16 +27,25 @@
       <div class="container " id="quiz-container">
         <div class="questions">
           <h6 style="font-size: 20px;" class="questions w-50 rounded bg-primary my-2" id="question"></h6>
+          <span class="d-flex mt-5" style="align-self: auto;">
+            <button onclick="a()" type="button" id=" optionA" class=" btn btn-primary text-danger option w-75 rounded-pill"></button>
+            <button onclick="b()" type="button" id=" optionB" class=" btn btn-primary text-danger option w-75 rounded-pill ms-5"></button>
+
+          </span>
+          <span class="d-flex mt-5" style="align-self: auto;">
+            <button  onclick="c()"  type="button" id=" optionC" class=" btn btn-primary w-75 rounded-pill"></button>
+            <button  onclick="d()" type="button" id=" optionD" class=" btn btn-primary w-75 rounded-pill ms-5"></button>
+          </span>
        
-          <ol type="A" class="">
-            <li class="option"><span id="option0" class="rounded-pill  text-primary  a"></span></li>
-            <li class="option"><span id="option1" class="rounded-pill  text-primary b"></span></li>
-            <li class="option"><span id="option2" class="rounded-pill  text-primary c"></span></li>
-            <li class="option"><span id="option3" class="rounded-pill  text-primary d"></span></li>
-           </ol>
+          <!-- <ol type="A" class="">
+            <li class="option"><span id="option0"   class="rounded-pill button  text-primary  a"></span></li>
+            <li class="option"><span id="option1"  class="rounded-pill  button text-primary b"></span></li>
+            <li class="option"><span id="option2"  class="rounded-pill  button text-primary c"></span></li>
+            <li class="option"><span id="option3"  class="rounded-pill  button text-primary d"></span></li>
+           </ol> -->
           <h4 id="stat"></h4>
-          <button class="btn btn-outline-success text-danger" id="next">Next</button>
-          <button class="btn btn-outline-success text-danger" id="answer">Answer</button>
+          <button onclick="loadQuestions()"  class="btn btn-outline-success text-danger" id="loadQuestions">Start Test</button>
+          <button onclick="nextQuestions()" class="btn btn-outline-success text-danger" id="next">Next</button>
       
      <!-- <div class="buttons">
       <button type="button" class="next btn btn-outline info bg-primary justify-content-between"></button> 

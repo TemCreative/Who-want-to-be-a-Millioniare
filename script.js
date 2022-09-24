@@ -1,9 +1,12 @@
-var btnNext = document.getElementById("next");
-var btnAns = document.getElementById("answer")
+var btnLoadQuestions = document.getElementById("loadQuestions");
+var btnNext = document.getElementById("next")
  words = [
 	{
 		question :  'Free surface of a liquid behaves like a sheet and tends to contract to the smallest possible area due to the',
-		option : ['force of adhesion','force of friction','centrifugal force','force of cohesion'],
+		optionA : ['force of adhesion'],
+		optionB :  ['force of friction'],
+		optionC : ['centrifugal force'],
+		optionD : ['force of cohesion'],
 		answer : 'force of cohesion' 
 	},
 	{
@@ -73,33 +76,37 @@ var btnAns = document.getElementById("answer")
 	},
 ]
 
-    btnNext.addEventListener('click', function() {
-	var tempWords = [];
+    // btnLoadQuestions.addEventListener('click', function() {
+	// var tempWords = [];
   
-	if (tempWords.length === 0) {
-	  for (var i = 0; i < words.length; i++) {
-		tempWords.push(words[i]);
+	// if (tempWords.length === 0) {
+	//   for (var i = 0; i < words.length; i++) {
+	// 	tempWords.push(words[i]);
   
-	  }
-	}
+	//   }
+	// }
   
-	let index = Math.floor(Math.random() * tempWords.length);
-	document.getElementById("question").innerHTML=tempWords[index]?.question;
-	 document.getElementById("answer").innerHTML=tempWords[index]?.answer;	
-
-	let option0 = Math.floor(Math.random() * tempWords.length);
-	document.getElementById("option0").innerHTML=tempWords[index]?.question.option;
+	// let index = Math.floor(Math.random() * tempWords.length);
+	// document.getElementById("question").innerHTML=tempWords[index]?.question;
+	//  document.getElementById("optionA").innerHTML=tempWords[index]?.optionA;	
+	 
 	
-	let option1 = Math.floor(Math.random() * tempWords.length);
-	document.getElementById("option1").innerHTML=tempWords[index]?.question.option;
+// 	let optionA = Math.floor(Math.random() * tempWords.length);
+// 	document.getElementById("optionA").innerHTML=tempWords[index]?.optionA;
+	
+// 	let optionB = Math.floor(Math.random() * tempWords.length);
+// 	document.getElementById("optionB").innerHTML=tempWords[index]?.optionB;
 
 	
-	let option2 = Math.floor(Math.random() * tempWords.length);
-	document.getElementById("option2").innerHTML=tempWords[index]?.question.option;
+// 	let optionC = Math.floor(Math.random() * tempWords.length);
+// 	document.getElementById("optionC").innerHTML=tempWords[index]?.optionC;
 
-	let option3 = Math.floor(Math.random() * tempWords.length);
-	document.getElementById("option3").innerHTML=tempWords[index]?.question.option;
-  });
+// 	let optionD = Math.floor(Math.random() * tempWords.length);
+// 	document.getElementById("optionD").innerHTML=tempWords[index]?.optionD;
+//   });
+
+ 
+
     //  var question = document.getElementById ('question');
 	//  var quizContainer = document.getElementById ('quiz-container');	
 	//  var question = document.getElementById ('question');	
@@ -131,4 +138,10 @@ var btnAns = document.getElementById("answer")
 	//  console.log(displayQuestions)
 
 
-
+	function loadQuestions(){
+		allQuestions.filter((items,index,array) => {
+			optionA.innerHTML = item.first_otion
+			optionB.innerHTML = item.second_otion
+			optionC.innerHTML = item.third_otion
+			optionD.innerHTML = item.fourth_otion
+		})
