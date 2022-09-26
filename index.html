@@ -18,47 +18,42 @@
     }
    </style>
 <body>
-    <img src="/images/50-50.png" alt="" class="img"><br>
+    <img src="/images/50-50.png" alt=""  class="fifty-fifty"><br>
     <img src="/images/ask-the-audience.png" alt="" class="img"><br>
-    <img src="/images/audience.png" alt="" class="img"><br>
+    <img src="/images/audience.png" alt="" class="second-guess-button"><br>
     <img src="/images/logo.jpg" alt="" class="img"><br>
   
     <center>
       <div class="container " id="quiz-container">
         <div class="questions">
-          <h6 style="font-size: 20px;" class="questions w-50 rounded bg-primary my-2" id="question"></h6>
+          <div class="timer border-0 btn-primary w-25">40</div>
+          <h6 style="font-size: 20px;" class="question-container w-50 rounded bg-primary my-2" id="question"></h6>
+          <div class="answer-container">
+
+         
           <span class="d-flex mt-5" style="align-self: auto;">
-            <button onclick="a()" type="button" id=" optionA" class=" btn btn-primary text-danger option w-75 rounded-pill"></button>
-            <button onclick="b()" type="button" id=" optionB" class=" btn btn-primary text-danger option w-75 rounded-pill ms-5"></button>
+            <button onclick="a()" type="button" id=" optionA" class=" answer btn btn-primary text-danger option w-75 rounded-pill"></button>
+            <button onclick="b()" type="button" id=" optionB" class=" answer btn btn-primary text-danger option w-75 rounded-pill ms-5"></button>
 
           </span>
           <span class="d-flex mt-5" style="align-self: auto;">
-            <button  onclick="c()"  type="button" id=" optionC" class=" btn btn-primary w-75 rounded-pill"></button>
-            <button  onclick="d()" type="button" id=" optionD" class=" btn btn-primary w-75 rounded-pill ms-5"></button>
+            <button  onclick="c()"  type="button" id=" optionC" class=" answer btn btn-primary w-75 rounded-pill"></button>
+            <button  onclick="d()" type="button" id=" optionD" class=" answer btn btn-primary w-75 rounded-pill ms-5"></button>
           </span>
        
-          <!-- <ol type="A" class="">
-            <li class="option"><span id="option0"   class="rounded-pill button  text-primary  a"></span></li>
-            <li class="option"><span id="option1"  class="rounded-pill  button text-primary b"></span></li>
-            <li class="option"><span id="option2"  class="rounded-pill  button text-primary c"></span></li>
-            <li class="option"><span id="option3"  class="rounded-pill  button text-primary d"></span></li>
-           </ol> -->
-          <h4 id="stat"></h4>
-          <button onclick="loadQuestions()"  class="btn btn-outline-success text-danger" id="loadQuestions">Start Test</button>
+        </div>
+          
+          
+          <button onclick="loadQuestions()"  class="start btn btn-outline-success text-danger">Start</button>
           <button onclick="nextQuestions()" class="btn btn-outline-success text-danger" id="next">Next</button>
+
+          <div class="points-container hidden">0</div>
       
-     <!-- <div class="buttons">
-      <button type="button" class="next btn btn-outline info bg-primary justify-content-between"></button> 
-     </div>    -->
-<!--        
-           <div id="scoreboard">
-            <img src="" alt="">
-              <h1 id="score-title">Your Score</h1>
-              <h1 id="score-card"></h1>
-              <button type="button" id="score-btn" class="text-primary btn btn-outline info bg-light">Back to Quiz</button>
-              <button type="button" id="check-answer" class="text-primary btn btn-outline info bg-light">Check Answer</button>
-           </div>  
-           -->
+          
+           <audio id="lets-play" src="https://millionaire-school.netlify.com/sounds/lets_play.mp3"></audio>
+	<audio id="easy" src="https://millionaire-school.netlify.com/sounds/easy.mp3"></audio>
+	<audio id="wrong-answer" src="https://millionaire-school.netlify.com/sounds/wrong_answer.mp3"></audio>
+	<audio id="correct-answer" src="https://millionaire-school.netlify.com/sounds/correct_answer.mp3"></audio>
     </center>
  
    
