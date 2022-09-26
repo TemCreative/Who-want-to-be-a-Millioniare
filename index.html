@@ -24,11 +24,11 @@
     <img src="/images/logo.jpg" alt="" class="img"><br>
   
     <center>
-      <div class="container " id="quiz-container">
+      <div class="container hide" id="quiz-container">
         <div class="questions">
-          <!-- <div class="timer border-0 btn-primary w-25">40</div> -->
-          <h6 style="font-size: 20px;" class="question-container w-50 rounded bg-primary my-2" id="question"></h6>
-          <div class="answer-container">
+          
+          <h6 style="font-size: 20px;" class="question-container w-50 rounded bg-primary my-2 hide" id="question"></h6>
+          <div class="answer-buttons">
 
          
           <span class="d-flex mt-5" style="align-self: auto;">
@@ -44,8 +44,8 @@
         </div>
           
           
-          <button id="next"  class="start btn btn-outline-success text-danger">Start</button>
-          <button onclick="nextQuestions()" class="btn btn-outline-success text-danger" id="next">Next</button>
+          <button id="start-btn"  class="start btn btn-outline-success text-danger">Start</button>
+          <button class="btn btn-outline-success text-danger" id="next-btn">Next</button>
 
           <!-- <div class="points-container hidden">0</div> -->
       
