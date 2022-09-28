@@ -1,5 +1,5 @@
 var btnNext = document.getElementById("next");
-var btnNext = document.getElementById("next")
+// var btnNext = document.getElementById("next")
  words = [
 	{
 		question :  'Free surface of a liquid behaves like a sheet and tends to contract to the smallest possible area due to the',
