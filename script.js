@@ -82,6 +82,17 @@ var btnNext = document.getElementById("next")
   
 	  }
 	}
+	var audio = new Audio("https://millionaire-school.netlify.com/sounds/lets_play.mp3");
+
+audio.oncanplaythrough = function(){
+audio.play();
+}
+
+audio.loop = true;
+
+audio.onended = function(){
+audio.play();
+}
   
 	let index = Math.floor(Math.random() * tempWords.length);
 	document.getElementById("question").innerHTML=tempWords[index].question;
