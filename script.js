@@ -1,5 +1,5 @@
 var btnNext = document.getElementById("next");
-// var btnNext = document.getElementById("next")
+var btnNext = document.getElementById("next")
  words = [
 	{
 		question :  'Free surface of a liquid behaves like a sheet and tends to contract to the smallest possible area due to the',
@@ -85,24 +85,12 @@ var btnNext = document.getElementById("next");
   
 	let index = Math.floor(Math.random() * tempWords.length);
 	document.getElementById("question").innerHTML=tempWords[index].question;
-	 document.getElementById("optA").innerHTML=tempWords[index].optionA [0];	
-	 document.getElementById("optB").innerHTML=tempWords[index].optionB [1];	
-	 document.getElementById("optC").innerHTML=tempWords[index].optionA [2];	
+	 document.getElementById("optA").innerHTML=tempWords[index].option[0];	
+	 document.getElementById("optB").innerHTML=tempWords[index].option[1];	
+	 document.getElementById("optC").innerHTML=tempWords[index].option[2];	
+	 document.getElementById("optD").innerHTML=tempWords[index].option[3];	
 	 
-	 
-	
-	let optionA = Math.floor(Math.random() * tempWords.length);
-	document.getElementById("optionA").innerHTML=tempWords[index]?.optionA;
-	
-	let optionB = Math.floor(Math.random() * tempWords.length);
-	document.getElementById("optionB").innerHTML=tempWords[index]?.optionB;
 
-	
-	let optionC = Math.floor(Math.random() * tempWords.length);
-	document.getElementById("optionC").innerHTML=tempWords[index]?.optionC;
-
-	let optionD = Math.floor(Math.random() * tempWords.length);
-	document.getElementById("optionD").innerHTML=tempWords[index]?.optionD;
   });
 
  
