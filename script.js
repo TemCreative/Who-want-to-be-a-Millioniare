@@ -73,37 +73,37 @@ var btnNext = document.getElementById("next");
 	},
 ]
 
-//      btnNext.addEventListener('click', function() {
-// 	var tempWords = [];
+     btnNext.addEventListener('click', function() {
+	var tempWords = [];
   
-// 	if (tempWords.length === 0) {
-// 	  for (var i = 0; i < words.length; i++) {
-// 		tempWords.push(words[i]);
+	if (tempWords.length === 0) {
+	  for (var i = 0; i < words.length; i++) {
+		tempWords.push(words[i]);
   
-// 	  }
-// 	}
+	  }
+	}
   
-// 	let index = Math.floor(Math.random() * tempWords.length);
-// 	document.getElementById("question").innerHTML=tempWords[index].question;
-// 	 document.getElementById("optionA").innerHTML=tempWords[index].optionA [0];	
-// 	 document.getElementById("optionB").innerHTML=tempWords[index].optionB [1];	
-// 	 document.getElementById("optionC").innerHTML=tempWords[index].optionA [2];	
+	let index = Math.floor(Math.random() * tempWords.length);
+	document.getElementById("question").innerHTML=tempWords[index].question;
+	 document.getElementById("optA").innerHTML=tempWords[index].optionA [0];	
+	 document.getElementById("optB").innerHTML=tempWords[index].optionB [1];	
+	 document.getElementById("optC").innerHTML=tempWords[index].optionA [2];	
 	 
 	 
 	
-// 	// let optionA = Math.floor(Math.random() * tempWords.length);
-// 	// document.getElementById("optionA").innerHTML=tempWords[index]?.optionA;
+	let optionA = Math.floor(Math.random() * tempWords.length);
+	document.getElementById("optionA").innerHTML=tempWords[index]?.optionA;
 	
-// 	// let optionB = Math.floor(Math.random() * tempWords.length);
-// 	// document.getElementById("optionB").innerHTML=tempWords[index]?.optionB;
+	let optionB = Math.floor(Math.random() * tempWords.length);
+	document.getElementById("optionB").innerHTML=tempWords[index]?.optionB;
 
 	
-// 	// let optionC = Math.floor(Math.random() * tempWords.length);
-// 	// document.getElementById("optionC").innerHTML=tempWords[index]?.optionC;
+	let optionC = Math.floor(Math.random() * tempWords.length);
+	document.getElementById("optionC").innerHTML=tempWords[index]?.optionC;
 
-// 	// let optionD = Math.floor(Math.random() * tempWords.length);
-// 	// document.getElementById("optionD").innerHTML=tempWords[index]?.optionD;
-//   });
+	let optionD = Math.floor(Math.random() * tempWords.length);
+	document.getElementById("optionD").innerHTML=tempWords[index]?.optionD;
+  });
 
  
 
