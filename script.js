@@ -1,5 +1,5 @@
-var btnNext = document.getElementById("next");
-// var btnNext = document.getElementById("next")
+var btnStart = document.getElementById("start");
+var btnNext = document.getElementById("next")
  words = [
 	{
 		question :  'Free surface of a liquid behaves like a sheet and tends to contract to the smallest possible area due to the',
@@ -74,6 +74,25 @@ var btnNext = document.getElementById("next");
 ]
 
      btnNext.addEventListener('click', function() {
+	var tempWords = [];
+  
+	if (tempWords.length === 0) {
+	  for (var i = 0; i < words.length; i++) {
+		tempWords.push(words[i]);
+  
+	  }
+	}
+  
+	let index = Math.floor(Math.random() * tempWords.length);
+	document.getElementById("question").innerHTML=tempWords[index].question;
+	 document.getElementById("optA").innerHTML=tempWords[index].option[0];	
+	 document.getElementById("optB").innerHTML=tempWords[index].option[1];	
+	 document.getElementById("optC").innerHTML=tempWords[index].option[2];	
+	 document.getElementById("optD").innerHTML=tempWords[index].option[3];	
+	 
+
+  });
+  btnStart.addEventListener('click', function() {
 	var tempWords = [];
   
 	if (tempWords.length === 0) {
