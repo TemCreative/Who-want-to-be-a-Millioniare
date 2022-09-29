@@ -12,3 +12,11 @@ gm{
  
    
 }
+#overLay{
+    width: 68vh;
+    height: 68vh;
+    border-radius: 100%;
+    background-color: #0a08631b;
+    margin-top: 160px;
+    color: white;
+}
