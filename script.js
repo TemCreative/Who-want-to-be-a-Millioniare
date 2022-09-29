@@ -130,7 +130,7 @@
 	let points = document.getElementById('display');
 	let a = 0
 	let price = 500
-	let song = new Audio("./sound/correct-answer.mp3")
+	let song = new Audio("/images/sound_right.mp3")
         let song1 = new Audio("/images/sound_wrong.mp3")
         let song2 = new Audio("/images/sound_background.mp3")
         let song3 = new Audio("/images/sound_right.mp3")
