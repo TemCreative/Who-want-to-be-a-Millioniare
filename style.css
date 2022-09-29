@@ -1,39 +1,11 @@
-/* .a{
-    background-color: black;
-    color: white;
-}
-.a:hover{
-    background-color: red;
-}
-.b{
-    background-color: black;
-    color: white;
-}
-.b:hover{
-    background-color: green;
-}
-.c{
-    background-color: black;
-    color: white;
-}
-.c:hover{
-    background-color: red;
-}
-.d{
-    background-color: black;
-    color: white;
-}
-.d:hover{
-    background-color: red;
-} */
+
 .img{
     height: 5.2rem;
     width: 5.2rem;
 }
-ol {
-    columns: 2;
-    -webkit-columns: 2;
-    -moz-columns: 2;
-    /* background-color: aqua; */
-    border-radius: 50px;
+li{
+    line-height: 2.75rem;
+}
+gm{
+    line-height: 2.75rem;
 }
