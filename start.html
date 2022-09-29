@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css" integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="bootstrap-5.1.3-dist/css/bootstrap.css">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Start-game</title>
 </head>
 <style>
     body{
@@ -18,9 +18,9 @@
         min-height: 100vh;
     }
    </style>
-<body>
+<body onload="playSong()">
   <button onclick="fifty()"> <img src="/images/50-50.png" alt=""  class="fifty-fifty"></button><br>
-   <span onclick="audience()"><img src="/images/ask-the-audience.png" alt="" class="img"></span><br>
+   <span onclick="audience()"><img src="/images/ask-the-audience.png" alt="" id="friendImg"  class="img"></span><br>
     <span onclick="phoneAfriend()"><img src="/images/audience.png" alt="" class="second-guess-button"></span><br>
     <!-- <img src="/images/logo.jpg" alt="" class="img"><br> -->
    
@@ -36,8 +36,8 @@
 
          
           <span class="d-flex mt-5" style="align-self: auto;">
-            <button  type="button" id="option0" onclick="checkAnswer(this)"  class=" span answer btn btn-primary option w-75 rounded-pill"></button>
-            <button  type="button" id="option1" onclick="checkAnswer(this)" class=" span answer btn btn-primary option w-75 rounded-pill ms-5"></button>
+            <button  type="button" id="option0" onclick="checkAnswer(this)"  class=" span answer btn btn-primary  w-75 rounded-pill"></button>
+            <button  type="button" id="option1" onclick="checkAnswer(this)" class=" span answer btn btn-primary  w-75 rounded-pill ms-5"></button>
 
           </span>
           <span class="d-flex mt-5" style="align-self: auto;">

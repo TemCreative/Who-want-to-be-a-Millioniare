@@ -1,6 +1,6 @@
 // var btnStart = document.getElementById("start");
 // var btnNext = document.getElementById("next")
- const words = [
+ const allQuestion = [
 	{
 		question :  'Free surface of a liquid behaves like a sheet and tends to contract to the smallest possible area due to the',
 		option : ['force of adhesion','force of friction','centrifugal force','force of cohesion'],
@@ -132,27 +132,27 @@
 	let price = 500
 
   const displayQuestions = () => {
-	words.map((_,a)=>{
+	allQuestion.map((_,a)=>{
 		span[a].style.background = 'red'
 	})
-	question.innerHTML = words[a].question;
-	question.innerHTML = words[a].question[0]
-	question.innerHTML = words[a].question[1]
-	question.innerHTML = words[a].question[2]
-	question.innerHTML = words[a].question[3]
+	question.innerHTML = allQuestion[a].question;
+	question.innerHTML = allQuestion[a].question[0]
+	question.innerHTML = allQuestion[a].question[1]
+	question.innerHTML = allQuestion[a].question[2]
+	question.innerHTML = allQuestion[a].question[3]
   }
   const checkAnswer =(e) => {
-	if(e.innerHTML === words[a].answer){
+	if(e.innerHTML === allQuestion[a].answer){
 		price += 500
 		document.getElementById(e.id).style.background = 'green';
 		song.play()
 		setTimeout(nextQuestions, 5000)
 	}
-	if(e.innerHTML === words[a].answer){
+	if(e.innerHTML === allQuestion[a].answer){
 		document.getElementById(e.id).style.background = 'yellow';
 		song.play()
 		setTimeout(() =>{
-			window.location.href = "home.html"
+			window.location.href = "gameover.html"
 		},3000)
 	}
   }
@@ -165,7 +165,7 @@
 	<h1 class="text-success fw-bold"><i>${price}</i></h1>`
   }
   const nextQuestion = () =>{
-    if(a<allQuestion.length - 1){
+    if(a <allQuestion.length - 1){
          a=a+1
          displayQuestion()
          points.innerHTML = `$ ${price}`;
@@ -173,14 +173,14 @@
     else{
         setTimeout(() => {
             window.location.href = "gameover.html"
-        }, 2000);
+        }, 5000);
     }
     
 }
 
 const fifty = ()=>{
-    opt0.innerHTML = "....."
-    opt3.innerHTML = "....."
+    option0.innerHTML = "....."
+    option3.innerHTML = "....."
     btn.innerHTML = `<img src="/images/50-50.png" alt="">`
     btn.onclick = ""
     song3.play()
@@ -201,8 +201,8 @@ const started=()=>{
 const playSong=()=>{
     song2.play()
 }
-const walkAway=()=>{
-    window.location.href = "endgame.html"
+const endGame=()=>{
+    window.location.href = "gameover.html"
     // location.reload()
 }
 const restart = () =>{
