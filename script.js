@@ -122,15 +122,24 @@
 	 
 
 //   });
+    let option0 =document.getElementById('optA')
+	let option1 = document.getElementById ('optB')
+	let option2 =document.getElementById ('optC')
+	let option3 = document.getElementById ('optD')
+	let span = document.querySelectorAll('button')
+	let points = document.getElementById('display');
+	let a = 0
+	let price = 500
+
   const displayQuestions = () => {
 	words.map((_,a)=>{
-		button[a].style.background = 'red'
+		span[a].style.background = 'red'
 	})
-	document.getElementById("question").innerHTML=tempWords[index].question;
-	 document.getElementById("optA").innerHTML=tempWords[index].option[0];	
-	 document.getElementById("optB").innerHTML=tempWords[index].option[1];	
-	 document.getElementById("optC").innerHTML=tempWords[index].option[2];	
-	 document.getElementById("optD").innerHTML=tempWords[index].option[3];	
+	question.innerHTML = words[a].question;
+	question.innerHTML = words[a].question[0]
+	question.innerHTML = words[a].question[1]
+	question.innerHTML = words[a].question[2]
+	question.innerHTML = words[a].question[3]
   }
   const checkAnswer =(e) => {
 	if(e.innerHTML === words[a].answer){
@@ -155,7 +164,52 @@
 	<h1><i>You have won</i></h1>
 	<h1 class="text-success fw-bold"><i>${price}</i></h1>`
   }
-   const 
+  const nextQuestion = () =>{
+    if(a<allQuestion.length - 1){
+         a=a+1
+         displayQuestion()
+         points.innerHTML = `$ ${price}`;
+    }
+    else{
+        setTimeout(() => {
+            window.location.href = "gameover.html"
+        }, 2000);
+    }
+    
+}
+
+const fifty = ()=>{
+    opt0.innerHTML = "....."
+    opt3.innerHTML = "....."
+    btn.innerHTML = `<img src="/images/50-50.png" alt="">`
+    btn.onclick = ""
+    song3.play()
+}
+ 
+const phoneAfriend = ()=>{
+        friendImg.innerHTML= `<img src="/images/ask-the-audience.png" alt="">`
+        friendImg.onclick = ""
+}
+const audience = ()=>{
+        Audience.innerHTML= `<img src="./images/ask-the-audience-used.png" alt="">`
+        Audience.onclick = ""
+}
+
+const started=()=>{
+    window.location.href = "start.html"
+}
+const playSong=()=>{
+    song2.play()
+}
+const walkAway=()=>{
+    window.location.href = "endgame.html"
+    // location.reload()
+}
+const restart = () =>{
+    window.location.href = "start.html"
+}
+
+
 
 //      var question = document.getElementById ('question');
 // 	 var quizContainer = document.getElementById ('quiz-container');	
