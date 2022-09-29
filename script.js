@@ -1,6 +1,6 @@
-var btnStart = document.getElementById("start");
-var btnNext = document.getElementById("next")
- words = [
+// var btnStart = document.getElementById("start");
+// var btnNext = document.getElementById("next")
+ const words = [
 	{
 		question :  'Free surface of a liquid behaves like a sheet and tends to contract to the smallest possible area due to the',
 		option : ['force of adhesion','force of friction','centrifugal force','force of cohesion'],
@@ -73,57 +73,89 @@ var btnNext = document.getElementById("next")
 	},
 ]
 
-     btnNext.addEventListener('click', function() {
-	var tempWords = [];
+//      btnNext.addEventListener('click', function() {
+// 	var tempWords = [];
   
-	if (tempWords.length === 0) {
-	  for (var i = 0; i < words.length; i++) {
-		tempWords.push(words[i]);
+// 	if (tempWords.length === 0) {
+// 	  for (var i = 0; i < words.length; i++) {
+// 		tempWords.push(words[i]);
   
-	  }
-	}
-	var audio = new Audio("https://millionaire-school.netlify.com/sounds/lets_play.mp3");
+// 	  }
+// 	}
+// 	var audio = new Audio("https://millionaire-school.netlify.com/sounds/lets_play.mp3");
 
-audio.oncanplaythrough = function(){
-audio.play();
-}
+// audio.oncanplaythrough = function(){
+// audio.play();
+// }
 
-audio.loop = true;
+// audio.loop = true;
 
-audio.onended = function(){
-audio.play();
-}
+// audio.onended = function(){
+// audio.play();
+// }
   
-	let index = Math.floor(Math.random() * tempWords.length);
+// 	let index = Math.floor(Math.random() * tempWords.length);
+// 	document.getElementById("question").innerHTML=tempWords[index].question;
+// 	 document.getElementById("optA").innerHTML=tempWords[index].option[0];	
+// 	 document.getElementById("optB").innerHTML=tempWords[index].option[1];	
+// 	 document.getElementById("optC").innerHTML=tempWords[index].option[2];	
+// 	 document.getElementById("optD").innerHTML=tempWords[index].option[3];	
+	 
+
+//   });
+//   btnStart.addEventListener('click', function() {
+// 	var tempWords = [];
+  
+// 	if (tempWords.length === 0) {
+// 	  for (var i = 0; i < words.length; i++) {
+// 		tempWords.push(words[i]);
+  
+// 	  }
+// 	}
+  
+// 	let index = Math.floor(Math.random() * tempWords.length);
+// 	document.getElementById("question").innerHTML=tempWords[index].question;
+// 	 document.getElementById("optA").innerHTML=tempWords[index].option[0];	
+// 	 document.getElementById("optB").innerHTML=tempWords[index].option[1];	
+// 	 document.getElementById("optC").innerHTML=tempWords[index].option[2];	
+// 	 document.getElementById("optD").innerHTML=tempWords[index].option[3];	
+	 
+
+//   });
+  const displayQuestions = () => {
+	words.map((_,a)=>{
+		button[a].style.background = 'red'
+	})
 	document.getElementById("question").innerHTML=tempWords[index].question;
 	 document.getElementById("optA").innerHTML=tempWords[index].option[0];	
 	 document.getElementById("optB").innerHTML=tempWords[index].option[1];	
 	 document.getElementById("optC").innerHTML=tempWords[index].option[2];	
 	 document.getElementById("optD").innerHTML=tempWords[index].option[3];	
-	 
-
-  });
-  btnStart.addEventListener('click', function() {
-	var tempWords = [];
-  
-	if (tempWords.length === 0) {
-	  for (var i = 0; i < words.length; i++) {
-		tempWords.push(words[i]);
-  
-	  }
+  }
+  const checkAnswer =(e) => {
+	if(e.innerHTML === words[a].answer){
+		price += 500
+		document.getElementById(e.id).style.background = 'green';
+		song.play()
+		setTimeout(nextQuestions, 5000)
 	}
-  
-	let index = Math.floor(Math.random() * tempWords.length);
-	document.getElementById("question").innerHTML=tempWords[index].question;
-	 document.getElementById("optA").innerHTML=tempWords[index].option[0];	
-	 document.getElementById("optB").innerHTML=tempWords[index].option[1];	
-	 document.getElementById("optC").innerHTML=tempWords[index].option[2];	
-	 document.getElementById("optD").innerHTML=tempWords[index].option[3];	
-	 
-
-  });
-
- 
+	if(e.innerHTML === words[a].answer){
+		document.getElementById(e.id).style.background = 'yellow';
+		song.play()
+		setTimeout(() =>{
+			window.location.href = "home.html"
+		},3000)
+	}
+  }
+  const gameOver = () => {
+	price += 5000
+	overLay.innerHTML = `
+	<h1 class = "text-light text">GameOver </h1>
+	<h1><i> Congratulations</i></h1>
+	<h1><i>You have won</i></h1>
+	<h1 class="text-success fw-bold"><i>${price}</i></h1>`
+  }
+   const 
 
 //      var question = document.getElementById ('question');
 // 	 var quizContainer = document.getElementById ('quiz-container');	
