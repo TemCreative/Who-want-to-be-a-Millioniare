@@ -15,6 +15,7 @@
         background-size: fixed;
         background-repeat: no-repeat;
         background-size: cover;
+        min-height: 100vh;
     }
    </style>
 <body>
@@ -22,7 +23,7 @@
     <center>
         
         <div class="
-         text-light col-sm-9 col-md-9 col-lg-6 h-50 my-7" style="background-color: #605d7bcf;" >
+         text-light col-sm-9 col-md-9 col-lg-6 h-50 my-7" style="background-color: #00023a7b; padding-top: 200px;" >
        
          <h1 class="gm">RULES OF THE GAME</h1>
          <ul style="list-style-type:none;" class="li">
@@ -40,6 +41,17 @@
         const start = () => {
             window.location.href = "start.html"
         }
+        var audio = new Audio("https://millionaire-school.netlify.com/sounds/lets_play.mp3");
+                     
+                     audio.onclick = function(){
+                     audio.play();
+                     }
+                     
+                     audio.loop = true;
+                     
+                     audio.onended = function(){
+                     audio.play();
+}
     </script>
 </body>
 </html>

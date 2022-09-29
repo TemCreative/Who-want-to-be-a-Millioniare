@@ -122,10 +122,10 @@
 	 
 
 //   });
-    let option0 =document.getElementById('optA')
-	let option1 = document.getElementById ('optB')
-	let option2 =document.getElementById ('optC')
-	let option3 = document.getElementById ('optD')
+    let option0 =document.getElementById('option0')
+	let option1 = document.getElementById ('option1')
+	let option2 =document.getElementById ('option2')
+	let option3 = document.getElementById ('option3')
 	let span = document.querySelectorAll('button')
 	let points = document.getElementById('display');
 	let a = 0

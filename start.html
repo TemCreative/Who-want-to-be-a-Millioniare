@@ -15,39 +15,41 @@
         background-size: fixed;
         background-repeat: no-repeat;
         background-size: cover;
+        min-height: 100vh;
     }
    </style>
 <body>
   <button onclick="fifty()"> <img src="/images/50-50.png" alt=""  class="fifty-fifty"></button><br>
    <span onclick="audience()"><img src="/images/ask-the-audience.png" alt="" class="img"></span><br>
     <span onclick="phoneAfriend()"><img src="/images/audience.png" alt="" class="second-guess-button"></span><br>
-    <img src="/images/logo.jpg" alt="" class="img"><br>
+    <!-- <img src="/images/logo.jpg" alt="" class="img"><br> -->
    
-  
+    <div id="display" class="rounded-pill pt-2 fs-5 fw-bold text-white">Amount Scored</div>
+    <span class="Endgame rounded-pill text-white  text-center btn my-4 btn-outline-primary  " style="width: 110px; height: 40px;" onclick="endGame()"Endgame>Endgame</span>
     <center>
-      <div id="display" class="rounded-pill pt-2 fs-5 fw-bold text-center ms-lg-5">Amount</div>
+     
       <div class="container hide" id="quiz-container">
         <div class="questions">
           
-          <h6 style="font-size: 18px;" class="question-container w-50 rounded-pill bg-primary my-2 hide" id="question"></h6>
+          <h6 style="font-size: 18px;" class=" w-50 rounded-pill bg-primary my-2 hide" id="question"></h6>
           <div class="answer-buttons">
 
          
           <span class="d-flex mt-5" style="align-self: auto;">
-            <button  type="button" id="optA" onclick="checkAnswer(this)"  class=" span answer btn btn-primary option w-75 rounded-pill"></button>
-            <button  type="button" id="optB" onclick="checkAnswer(this)" class=" span answer btn btn-primary option w-75 rounded-pill ms-5"></button>
+            <button  type="button" id="option0" onclick="checkAnswer(this)"  class=" span answer btn btn-primary option w-75 rounded-pill"></button>
+            <button  type="button" id="option1" onclick="checkAnswer(this)" class=" span answer btn btn-primary option w-75 rounded-pill ms-5"></button>
 
           </span>
           <span class="d-flex mt-5" style="align-self: auto;">
-            <button   type="button" id="optC" onclick="checkAnswer(this)"  class=" span answer btn btn-primary w-75 rounded-pill"></button>
-            <button  type="button" id="optD"  onclick="checkAnswer(this)" class=" span answer btn btn-primary w-75 rounded-pill ms-5"></button>
+            <button   type="button" id="option2" onclick="checkAnswer(this)"  class=" span answer btn btn-primary w-75 rounded-pill"></button>
+            <button  type="button" id="option3"  onclick="checkAnswer(this)" class=" span answer btn btn-primary w-75 rounded-pill ms-5"></button>
           </span>
        
         </div>
           
           
-          <button id="start"  class="start btn btn-outline-success text-danger">Start</button>
-          <button class="btn btn-outline-success text-danger" id="next">Next</button>
+          <!-- <button onclick="checkAnswer(this)" class="start btn btn-outline-success text-danger">Start</button>
+          <button class="btn btn-outline-success text-danger" id="next">Next</button> -->
 
           <!-- <div class="points-container hidden">0</div> -->
       
