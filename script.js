@@ -1,6 +1,6 @@
-// var btnStart = document.getElementById("start");
-// var btnNext = document.getElementById("next")
- const allQuestion = [
+var btnStart = document.getElementById("start");
+var btnNext = document.getElementById("next")
+ words = [
 	{
 		question :  'Free surface of a liquid behaves like a sheet and tends to contract to the smallest possible area due to the',
 		option : ['force of adhesion','force of friction','centrifugal force','force of cohesion'],
@@ -73,55 +73,74 @@
 	},
 ]
 
-//      btnNext.addEventListener('click', function() {
-// 	var tempWords = [];
+     btnNext.addEventListener('click', function() {
+	var tempWords = [];
   
-// 	if (tempWords.length === 0) {
-// 	  for (var i = 0; i < words.length; i++) {
-// 		tempWords.push(words[i]);
+	if (tempWords.length === 0) {
+	  for (var i = 0; i < words.length; i++) {
+		tempWords.push(words[i]);
   
-// 	  }
-// 	}
-// 	var audio = new Audio("https://millionaire-school.netlify.com/sounds/lets_play.mp3");
+	  }
+	}
+	var audio = new Audio("https://millionaire-school.netlify.com/sounds/lets_play.mp3");
 
-// audio.oncanplaythrough = function(){
-// audio.play();
-// }
+audio.oncanplaythrough = function(){
+audio.play();
+}
 
-// audio.loop = true;
+audio.loop = true;
 
-// audio.onended = function(){
-// audio.play();
-// }
+audio.onended = function(){
+audio.play();
+}
   
-// 	let index = Math.floor(Math.random() * tempWords.length);
-// 	document.getElementById("question").innerHTML=tempWords[index].question;
-// 	 document.getElementById("optA").innerHTML=tempWords[index].option[0];	
-// 	 document.getElementById("optB").innerHTML=tempWords[index].option[1];	
-// 	 document.getElementById("optC").innerHTML=tempWords[index].option[2];	
-// 	 document.getElementById("optD").innerHTML=tempWords[index].option[3];	
+	let index = Math.floor(Math.random() * tempWords.length);
+	document.getElementById("question").innerHTML=tempWords[index].question;
+	 document.getElementById("opt0").innerHTML=tempWords[index].option[0];	
+	 document.getElementById("opt1").innerHTML=tempWords[index].option[1];	
+	 document.getElementById("opt2").innerHTML=tempWords[index].option[2];	
+	 document.getElementById("opt3").innerHTML=tempWords[index].option[3];	
 	 
 
-//   });
-//   btnStart.addEventListener('click', function() {
-// 	var tempWords = [];
+  });
+  btnStart.addEventListener('click', function() {
+	var tempWords = [];
   
-// 	if (tempWords.length === 0) {
-// 	  for (var i = 0; i < words.length; i++) {
-// 		tempWords.push(words[i]);
+	if (tempWords.length === 0) {
+	  for (var i = 0; i < words.length; i++) {
+		tempWords.push(words[i]);
   
-// 	  }
-// 	}
+	  }
+	}
   
-// 	let index = Math.floor(Math.random() * tempWords.length);
-// 	document.getElementById("question").innerHTML=tempWords[index].question;
-// 	 document.getElementById("optA").innerHTML=tempWords[index].option[0];	
-// 	 document.getElementById("optB").innerHTML=tempWords[index].option[1];	
-// 	 document.getElementById("optC").innerHTML=tempWords[index].option[2];	
-// 	 document.getElementById("optD").innerHTML=tempWords[index].option[3];	
+	let index = Math.floor(Math.random() * tempWords.length);
+	document.getElementById("question").innerHTML=tempWords[index].question;
+	 document.getElementById("optA").innerHTML=tempWords[index].option[0];	
+	 document.getElementById("optB").innerHTML=tempWords[index].option[1];	
+	 document.getElementById("optC").innerHTML=tempWords[index].option[2];	
+	 document.getElementById("optD").innerHTML=tempWords[index].option[3];	
 	 
 
-//   });
+  });
+  btnNext.addEventListener('click', function() {
+	var tempWords = [];
+  
+	if (tempWords.length === 0) {
+	  for (var i = 0; i < words.length; i++) {
+		tempWords.push(words[i]);
+  
+	  }
+	}
+  
+	let index = Math.floor(Math.random() * tempWords.length);
+	document.getElementById("question").innerHTML=tempWords[index].question;
+	 document.getElementById("optA").innerHTML=tempWords[index].option[0];	
+	 document.getElementById("optB").innerHTML=tempWords[index].option[1];	
+	 document.getElementById("optC").innerHTML=tempWords[index].option[2];	
+	 document.getElementById("optD").innerHTML=tempWords[index].option[3];	
+	 
+
+  });
     let option0 =document.getElementById('option0')
 	let option1 = document.getElementById ('option1')
 	let option2 =document.getElementById ('option2')
@@ -136,23 +155,23 @@
         let song3 = new Audio("/images/sound_right.mp3")
 
   const displayQuestions = () => {
-	allQuestion.map((_,a)=>{
+	words.map((_,a)=>{
 		span[a].style.background = 'red'
 	})
-	question.innerHTML = allQuestion[a].question;
-	question.innerHTML = allQuestion[a].question[0]
-	question.innerHTML = allQuestion[a].question[1]
-	question.innerHTML = allQuestion[a].question[2]
-	question.innerHTML = allQuestion[a].question[3]
+	question.innerHTML = words[a].question;
+	question.innerHTML = words[a].question[0]
+	question.innerHTML = words[a].question[1]
+	question.innerHTML = words[a].question[2]
+	question.innerHTML = words[a].question[3]
   }
   const checkAnswer =(e) => {
-	if(e.innerHTML === allQuestion[a].answer){
+	if(e.innerHTML === words[a].answer){
 		price += 500
 		document.getElementById(e.id).style.background = 'green';
 		song.play()
 		setTimeout(nextQuestions, 5000)
 	}
-	if(e.innerHTML === allQuestion[a].answer){
+	else if(e.innerHTML === words[a].answer){
 		document.getElementById(e.id).style.background = 'yellow';
 		song.play()
 		setTimeout(() =>{
@@ -169,7 +188,7 @@
 	<h1 class="text-success fw-bold"><i>${price}</i></h1>`
   }
   const nextQuestion = () =>{
-    if(a <allQuestion.length - 1){
+    if(a <words.length - 1){
          a=a+1
          displayQuestion()
          points.innerHTML = `$ ${price}`;
@@ -199,9 +218,9 @@ const audience = ()=>{
         Audience.onclick = ""
 }
 
-const started=()=>{
-    window.location.href = "start.html"
-}
+// const started=()=>{
+//     window.location.href = "start.html"
+// }
 const playSong=()=>{
     song2.play()
 }
@@ -215,34 +234,34 @@ const restart = () =>{
 
 
 
-//      var question = document.getElementById ('question');
-// 	 var quizContainer = document.getElementById ('quiz-container');	
-// 	 var question = document.getElementById ('question');	
-// 	 var scorecard = document.getElementById ('scorecard');	
-// 	 var option0 = document.getElementById ('option0');	
-// 	 var option1 = document.getElementById ('option1');	
-// 	 var option2 = document.getElementById ('option2');	
-// 	 var option3  = document.getElementById ('option3');	
-// 	 var next = document.querySelectorAll('next');
-// 	 var point = document.getElementById('score');
-// 	 var span = document.querySelectorAll('span');
+    //  var question = document.getElementById ('question');
+	//  var quizContainer = document.getElementById ('quiz-container');	
+	//  var question = document.getElementById ('question');	
+	//  var scorecard = document.getElementById ('scorecard');	
+	//  var option0 = document.getElementById ('option0');	
+	//  var option1 = document.getElementById ('option1');	
+	//  var option2 = document.getElementById ('option2');	
+	//  var option3  = document.getElementById ('option3');	
+	//  var next = document.querySelectorAll('next');
+	//  var point = document.getElementById('score');
+	//  var span = document.querySelectorAll('span');
 
-// 	 var i = 0;
-// 	 var score = 0;
+	//  var i = 0;
+	//  var score = 0;
 
-// 	 function displayQuestions(){
-// 		// for(var a=0; a<span.length; a++){
-// 		// 	span[a].style.background ='none';
-// 		// }
-// 		// question.innerHTML = 'Q.' + (i + 1)+ ' ' + questionBanks[i]+ question;
-// 		// option1.innerHTML + questionBanks[i].option[0];
-// 		// option2.innerHTML + questionBanks[i].option[1];
-// 		// option3.innerHTML + questionBanks[i].option[2];
-// 		// option4.innerHTML + questionBanks[i].option[3];
-// 		// stat.innerHTML = "Question" + ' ' + 'of' + ' ' + (i + 1) + ' ' + questionBanks.length;
+	//  function displayQuestions(){
+	// 	// for(var a=0; a<span.length; a++){
+	// 	// 	span[a].style.background ='none';
+	// 	// }
+	// 	// question.innerHTML = 'Q.' + (i + 1)+ ' ' + questionBanks[i]+ question;
+	// 	// option1.innerHTML + questionBanks[i].option[0];
+	// 	// option2.innerHTML + questionBanks[i].option[1];
+	// 	// option3.innerHTML + questionBanks[i].option[2];
+	// 	// option4.innerHTML + questionBanks[i].option[3];
+	// 	// stat.innerHTML = "Question" + ' ' + 'of' + ' ' + (i + 1) + ' ' + questionBanks.length;
 		
-// 	 }
+	//  }
 	 
-// 	 console.log(displayQuestions)
+	//  console.log(displayQuestions)
 
 
